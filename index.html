@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <section class="container">
+        <button class="create-new-bloc-note">
+                <img src="./assets/logo.png" alt="logoBloc">
+        </button>
+        <div class="box-bloc">
+            <div class="add-new-bloc">
+                <div class="header-add-new-bloc">
+                    <h2 class="title">Bloc note</h2>
+                    <button class="close-new-bloc"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <form id="form">
+                    <label for="title">Titre du bloc</label>
+                    <input type="text" placeholder="Titre">
+                    <label for="text">Contenu du bloc</label>
+                    <textarea placeholder="Contenu" rows="8"></textarea>
+                    <button type="submit">Enregistrer</button>
+                </form>
+            </div>
+            
+            <div class="edit-bloc">
+                <div class="header-add-new-bloc">
+                    <h2 class="title">Edit note</h2>
+                    <button class="close-new-bloc"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <form id="formEdit">
+                    <label for="title">Titre du bloc</label>
+                    <input type="text" placeholder="Titre">
+                    <label for="text">Contenu du bloc</label>
+                    <textarea placeholder="Contenu" rows="8"></textarea>
+                    <button type="submit">Enregistrer</button>
+                </form>
+            </div>
+        </div>
+        <ul class="article-bloc-note">
+            <!-- add all blocs -->
+        </ul>
+    </section>
+
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>

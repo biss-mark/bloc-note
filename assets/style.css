@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+::selection {
+    background: #FF4242;
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FF4242;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.create-new-bloc-note {
+    border: 2px solid #FF4242;
+    background: none;
+    width: 190px;
+    cursor: pointer;
+    height: 190px;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.create-new-bloc-note img {
+    width: 100%;
+    height: 100%;
+}
+
+.article-bloc-note {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.article-bloc-note li {
+    border: 2px solid #FF4242;
+    border-radius: 5px;
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.article-bloc-note li .title-bloc {
+    text-align: center;
+    color: #FF4242;
+    text-transform: capitalize;
+    font-weight: bold;
+    border-bottom: 1px solid #888;
+    padding: 10px;
+}
+
+.article-bloc-note li .text-bloc {
+    text-align: justify;
+    padding: 10px;
+    max-height: 200px;
+    height: 100vh;
+    border-bottom: 1px solid #888;
+}
+
+.action-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: #333;
+}
+
+.management {
+    position: relative;
+}
+
+.management>button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: all .3s;
+}
+
+.management>button:hover {
+    background: #FF4242;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.more-action.menu {
+    opacity: 1;
+    z-index: 4;
+}
+
+.more-action {
+    position: absolute;
+    background: #FF4242;
+    border-radius: 4px;
+    display: flex;
+    opacity: 0;
+    z-index: -4;
+    transition: all .2s;
+    width: 100px;
+    flex-direction: column;
+    bottom: 27px;
+    overflow: hidden;
+    right: 34px;
+}
+
+.more-action button {
+    background: none;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    transition: all.3s;
+}
+
+.more-action button:hover {
+    background: #eb3d3d;
+}
+
+/* add bloc */
+
+.box-bloc {
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    background: #00000086;
+    top: 0;
+    z-index: -10;
+    left: 0;
+    transition: all .2s;
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+}
+
+.box-action {
+    opacity: 1;
+    z-index: 10;
+}
+
+.add-new-bloc, .edit-bloc {
+    background: #fff;
+    max-width: 350px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.header-add-new-bloc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FF4242;
+}
+
+.header-add-new-bloc button {
+    background: none;
+    border: none;
+    padding: 7px;
+    transition: all .2s;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.header-add-new-bloc button:hover {
+    background: #FF4242;
+    color: #fff;
+}
+
+#form, #formEdit {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 5px;
+}
+
+#form input,
+#form textarea, #formEdit input,
+#formEdit textarea {
+    padding: 10px;
+    border: 1px solid #FF4242;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+    resize: none;
+    overflow-x: hidden;
+}
+
+#form button, #formEdit button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #FF4242;
+    cursor: pointer;
+    color: #fff;
+}
+
+.edit-bloc{display: none;}
