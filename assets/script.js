@@ -10,16 +10,24 @@ const editBloc = document.querySelector('.edit-bloc');
 function showBox() {
     boxBloc.classList.add('box-action');
     document.body.style = `overflow: hidden;`;
+    addBloc.style.display = "block";
+    editBloc.style.display = "none";
 }
 function hideBox() {
     boxBloc.classList.remove('box-action');
     document.body.style = `overflow-x: hidden;`;
 }
 function editBox() {
-    boxBloc.classList.add('box-action');
-    document.body.style = `overflow: hidden;`;
-    addBloc.style.display = "none";
-    editBloc.style.display = "block";
+    if (window.scrollY > 0) {
+        
+        window.scrollTo(0, 0);
+
+        boxBloc.classList.add('box-action');
+        document.body.style = `overflow: hidden;`;
+        addBloc.style.display = "none";
+        editBloc.style.display = "block";
+    }
+
 }
 
 let blocs = JSON.parse(localStorage.getItem("notes")) || [];
@@ -108,7 +116,7 @@ function edit(id, title, text) {
 
             if (index !== -1) {
                 blocs.splice(index, 1);
-                blocs.push ({
+                blocs.push({
                     id: IdBloc,
                     title: titleEdit.value,
                     text: textEdit.value,
