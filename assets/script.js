@@ -8,10 +8,21 @@ const addBloc = document.querySelector('.add-new-bloc');
 const editBloc = document.querySelector('.edit-bloc');
 
 function showBox() {
-    boxBloc.classList.add('box-action');
-    document.body.style = `overflow: hidden;`;
-    addBloc.style.display = "block";
-    editBloc.style.display = "none";
+    if (window.scrollY > 0) {
+
+        window.scrollTo(0, 0);
+
+        boxBloc.classList.add('box-action');
+        document.body.style = `overflow: hidden;`;
+        addBloc.style.display = "block";
+        editBloc.style.display = "none";
+    } else if (window.scrollY == 0) {
+        boxBloc.classList.add('box-action');
+        document.body.style = `overflow: hidden;`;
+        addBloc.style.display = "block";
+        editBloc.style.display = "none";
+    }
+
 }
 function hideBox() {
     boxBloc.classList.remove('box-action');
@@ -19,9 +30,14 @@ function hideBox() {
 }
 function editBox() {
     if (window.scrollY > 0) {
-        
+
         window.scrollTo(0, 0);
 
+        boxBloc.classList.add('box-action');
+        document.body.style = `overflow: hidden;`;
+        addBloc.style.display = "none";
+        editBloc.style.display = "block";
+    } else if (window.scrollY == 0) {
         boxBloc.classList.add('box-action');
         document.body.style = `overflow: hidden;`;
         addBloc.style.display = "none";
